@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Micro Game"
-run/main_scene="uid://dnss6bxm8csjt"
+run/main_scene="uid://dkpci0ncj6be8"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
