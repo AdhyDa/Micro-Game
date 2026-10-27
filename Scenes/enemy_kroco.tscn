@@ -165,7 +165,6 @@ size = Vector2(20, 22)
 sprite_frames = SubResource("SpriteFrames_ifisb")
 animation = &"attack_enemy"
 autoplay = "idle_enemy"
-frame_progress = 0.2742217
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=998658936]
 position = Vector2(-2, 1)

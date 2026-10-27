@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://bhafo76cp4akn"]
+
+[ext_resource type="Texture2D" uid="uid://dm0kcbaaptec6" path="res://Assets/enemy/MiniShieldMan.png" id="1_47p6s"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_uupxc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3xxy"]
+atlas = ExtResource("1_47p6s")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_648fd"]
+atlas = ExtResource("1_47p6s")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_03pj2"]
+atlas = ExtResource("1_47p6s")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w5ahq"]
+atlas = ExtResource("1_47p6s")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ifisb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3xxy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_648fd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_03pj2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w5ahq")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="EnemyBoss" type="CharacterBody2D" unique_id=1716164722]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=822729628]
+material = SubResource("CanvasItemMaterial_uupxc")
+sprite_frames = SubResource("SpriteFrames_ifisb")
+frame = 1
+frame_progress = 0.9034277
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1102616580]
