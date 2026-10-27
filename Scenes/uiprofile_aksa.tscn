@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://d3kncmlml8pgc"]
+
+[ext_resource type="Texture2D" uid="uid://bgh01usndm3mf" path="res://Assets/images/FreeHorrorUi.png" id="1_wnqkx"]
+[ext_resource type="Texture2D" uid="uid://du0ccptkqpfix" path="res://Assets/images/WhatsApp Image 2026-10-27 at 16.28.16-Photoroom.png" id="2_wnqkx"]
+[ext_resource type="FontFile" uid="uid://cvn5lgl7b3tt7" path="res://Assets/fonts/PixelOperator8.ttf" id="3_7hwb5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vovuu"]
+atlas = ExtResource("1_wnqkx")
+region = Rect2(127.35563, 130.8466, 64.42214, 75.883606)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ifisb"]
+atlas = ExtResource("1_wnqkx")
+region = Rect2(4.9460526, 201.11624, 54.37905, 15.326416)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uupxc"]
+atlas = ExtResource("1_wnqkx")
+region = Rect2(69.416115, 201.48988, 52.97686, 14.774826)
+
+[node name="UIProfile" type="CanvasLayer" unique_id=2062210225]
+
+[node name="PopUpWajah" type="Control" parent="." unique_id=446378746]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -54.0
+offset_right = 75.0
+offset_bottom = 54.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Frame" type="TextureRect" parent="PopUpWajah" unique_id=780343203]
+layout_mode = 0
+offset_left = -59.0
+offset_top = -134.0
+offset_right = 182.0
+offset_bottom = 261.67163
+texture = SubResource("AtlasTexture_vovuu")
+
+[node name="FotoWajah" type="TextureRect" parent="PopUpWajah" unique_id=1602123517]
+layout_mode = 0
+offset_left = -42.000015
+offset_top = -77.00001
+offset_right = 6678.1523
+offset_bottom = 6643.1523
+scale = Vector2(0.025445852, 0.025445852)
+texture = ExtResource("2_wnqkx")
+
+[node name="TeksData" type="Label" parent="PopUpWajah" unique_id=339084252]
+layout_mode = 0
+offset_left = -50.00002
+offset_top = 119.0
+offset_right = 412.0864
+offset_bottom = 198.9765
+scale = Vector2(0.48764318, 0.48764318)
+theme_override_fonts/font = ExtResource("3_7hwb5")
+theme_override_font_sizes/font_size = 20
+text = "Adhyaksa Daudi Mustofa A.
+
+240533603336
+
+Project Level (Atmint)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="PopUpWajah" unique_id=1664748432]
+layout_mode = 0
+offset_left = 119.0
+offset_top = -91.999985
+offset_right = 357.10126
+offset_bottom = -25.860733
+scale = Vector2(0.46870795, 0.46870795)
+mouse_default_cursor_shape = 2
+texture_normal = SubResource("AtlasTexture_ifisb")
+texture_pressed = SubResource("AtlasTexture_uupxc")
+ignore_texture_size = true
+stretch_mode = 5
