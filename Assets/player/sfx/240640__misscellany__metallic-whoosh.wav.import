@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dsaw71l760jm7"
-path="res://.godot/imported/240640__misscellany__metallic-whoosh.wav-ed585f6d916d4065ba0498ad82e22dd9.sample"
+path="res://.godot/imported/240640__misscellany__metallic-whoosh.wav-e88ba32ca5e03d67e7e8bce664670603.sample"
 
 [deps]
 
-source_file="res://Assets/player/sfx/240640__misscellany__metallic-whoosh.wav"
-dest_files=["res://.godot/imported/240640__misscellany__metallic-whoosh.wav-ed585f6d916d4065ba0498ad82e22dd9.sample"]
+source_file="res://assets/player/sfx/240640__misscellany__metallic-whoosh.wav"
+dest_files=["res://.godot/imported/240640__misscellany__metallic-whoosh.wav-e88ba32ca5e03d67e7e8bce664670603.sample"]
 
 [params]
 

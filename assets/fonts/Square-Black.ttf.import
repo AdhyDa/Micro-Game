@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://btsai5vqjnhx4"
-path="res://.godot/imported/Square-Black.ttf-f64ee978b5371173694f14ddbde2f8d3.fontdata"
+path="res://.godot/imported/Square-Black.ttf-de15d4c54e84a512cb5a21b783a303c7.fontdata"
 
 [deps]
 
-source_file="res://Assets/fonts/Square-Black.ttf"
-dest_files=["res://.godot/imported/Square-Black.ttf-f64ee978b5371173694f14ddbde2f8d3.fontdata"]
+source_file="res://assets/fonts/Square-Black.ttf"
+dest_files=["res://.godot/imported/Square-Black.ttf-de15d4c54e84a512cb5a21b783a303c7.fontdata"]
 
 [params]
 

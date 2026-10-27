@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://btjldbou48p7x"
-path="res://.godot/imported/Hit (32x32).png-5d129cb5dcf97c08cf755be8a4f462b8.ctex"
+path="res://.godot/imported/Hit (32x32).png-cf23d33060e9ad19c119be271b33dc7a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/images/Pink Man/Hit (32x32).png"
-dest_files=["res://.godot/imported/Hit (32x32).png-5d129cb5dcf97c08cf755be8a4f462b8.ctex"]
+source_file="res://assets/images/Pink Man/Hit (32x32).png"
+dest_files=["res://.godot/imported/Hit (32x32).png-cf23d33060e9ad19c119be271b33dc7a.ctex"]
 
 [params]
 

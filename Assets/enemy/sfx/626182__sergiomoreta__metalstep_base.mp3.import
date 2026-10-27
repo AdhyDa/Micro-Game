@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://4r2qfm06e7xr"
-path="res://.godot/imported/626182__sergiomoreta__metalstep_base.mp3-271c5a145c428481598c1a23fa164d4a.mp3str"
+path="res://.godot/imported/626182__sergiomoreta__metalstep_base.mp3-f51154d54ed9a3b036660e3b4a8d30bd.mp3str"
 
 [deps]
 
-source_file="res://Assets/enemy/sfx/626182__sergiomoreta__metalstep_base.mp3"
-dest_files=["res://.godot/imported/626182__sergiomoreta__metalstep_base.mp3-271c5a145c428481598c1a23fa164d4a.mp3str"]
+source_file="res://assets/enemy/sfx/626182__sergiomoreta__metalstep_base.mp3"
+dest_files=["res://.godot/imported/626182__sergiomoreta__metalstep_base.mp3-f51154d54ed9a3b036660e3b4a8d30bd.mp3str"]
 
 [params]
 

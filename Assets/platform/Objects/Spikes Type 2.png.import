@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qc73ai5e0g7g"
-path="res://.godot/imported/Spikes Type 2.png-78ce7ff68bfaf5e0fd6cb5ac3237b0d7.ctex"
+path="res://.godot/imported/Spikes Type 2.png-7a6631ad060ac48c98f9caa8192b15da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/platform/Objects/Spikes Type 2.png"
-dest_files=["res://.godot/imported/Spikes Type 2.png-78ce7ff68bfaf5e0fd6cb5ac3237b0d7.ctex"]
+source_file="res://assets/platform/Objects/Spikes Type 2.png"
+dest_files=["res://.godot/imported/Spikes Type 2.png-7a6631ad060ac48c98f9caa8192b15da.ctex"]
 
 [params]
 
