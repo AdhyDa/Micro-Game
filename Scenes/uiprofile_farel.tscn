@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cfwyrmdw4jmsk"]
 
+[ext_resource type="Script" uid="uid://c24728sjfiacp" path="res://Scripts/uiprofile_farel.gd" id="1_f6qqv"]
 [ext_resource type="Texture2D" uid="uid://bgh01usndm3mf" path="res://Assets/images/FreeHorrorUi.png" id="1_sksin"]
 [ext_resource type="Texture2D" uid="uid://d0l4u2tderas8" path="res://Assets/images/wajah pixelate-Photoroom.png" id="2_vg7cj"]
 [ext_resource type="FontFile" uid="uid://cvn5lgl7b3tt7" path="res://Assets/fonts/PixelOperator8.ttf" id="3_qmlcf"]
@@ -17,6 +18,8 @@ atlas = ExtResource("1_sksin")
 region = Rect2(69.416115, 201.48988, 52.97686, 14.774826)
 
 [node name="UIProfile" type="CanvasLayer" unique_id=2062210225]
+process_mode = 3
+script = ExtResource("1_f6qqv")
 
 [node name="PopUpWajah" type="Control" parent="." unique_id=446378746]
 layout_mode = 3
@@ -78,3 +81,5 @@ texture_normal = SubResource("AtlasTexture_ifisb")
 texture_pressed = SubResource("AtlasTexture_uupxc")
 ignore_texture_size = true
 stretch_mode = 5
+
+[connection signal="pressed" from="PopUpWajah/TextureButton" to="." method="_on_texture_button_pressed"]
