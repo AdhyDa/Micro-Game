@@ -7,7 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://d15pkgdtgvrf1" path="res://Assets/player/sfx/554443__blankened__male-death-sound.mp3" id="5_52ee3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uupxc"]
-size = Vector2(15, 20)
+size = Vector2(16, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dewec"]
 atlas = ExtResource("1_kyqiw")
@@ -161,9 +161,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_yoq75")
 }],
-"loop": 0,
+"loop": 1,
 "name": &"attack_player",
-"speed": 20.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -266,24 +266,19 @@ animations = [{
 "speed": 7.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wa8bf"]
-size = Vector2(22, 15)
-
 [node name="Player" type="CharacterBody2D" unique_id=2106021912]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=187866655]
-visible = false
-position = Vector2(-0.5, 5)
+position = Vector2(0, 5)
 shape = SubResource("RectangleShape2D_uupxc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2126652363]
 sprite_frames = SubResource("SpriteFrames_ifisb")
-animation = &"attack_player"
+animation = &"idle_player"
 autoplay = "idle_player"
+frame_progress = 0.087772034
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1503006965]
-scale = Vector2(0.35999835, 0.35999835)
-zoom = Vector2(1.82, 1.82)
 
 [node name="SfxRun" type="AudioStreamPlayer2D" parent="." unique_id=38653562]
 stream = ExtResource("2_gntrk")
@@ -296,9 +291,3 @@ stream = ExtResource("4_nn08x")
 
 [node name="SfxDeath" type="AudioStreamPlayer2D" parent="." unique_id=68948540]
 stream = ExtResource("5_52ee3")
-
-[node name="Hitbox" type="Area2D" parent="." unique_id=836846443]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1636502334]
-position = Vector2(0, 4.5)
-shape = SubResource("RectangleShape2D_wa8bf")
