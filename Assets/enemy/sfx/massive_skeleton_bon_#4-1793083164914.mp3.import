@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://b1fm2b6oxu1l6"
-path="res://.godot/imported/massive_skeleton_bon_#4-1793083164914.mp3-6d50991972861338d80f38bd70174d2b.mp3str"
+path="res://.godot/imported/massive_skeleton_bon_#4-1793083164914.mp3-8382f156b6356f08f42a179a8980aad1.mp3str"
 
 [deps]
 
-source_file="res://Assets/enemy/sfx/massive_skeleton_bon_#4-1793083164914.mp3"
-dest_files=["res://.godot/imported/massive_skeleton_bon_#4-1793083164914.mp3-6d50991972861338d80f38bd70174d2b.mp3str"]
+source_file="res://assets/enemy/sfx/massive_skeleton_bon_#4-1793083164914.mp3"
+dest_files=["res://.godot/imported/massive_skeleton_bon_#4-1793083164914.mp3-8382f156b6356f08f42a179a8980aad1.mp3str"]
 
 [params]
 

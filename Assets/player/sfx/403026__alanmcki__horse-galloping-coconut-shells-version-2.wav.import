@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bpllpaybjkaoj"
-path="res://.godot/imported/403026__alanmcki__horse-galloping-coconut-shells-version-2.wav-bde34bd89922e64104b6ad4a62e49e84.sample"
+path="res://.godot/imported/403026__alanmcki__horse-galloping-coconut-shells-version-2.wav-0e641f6f016b0e64e1d1f2a167d7361d.sample"
 
 [deps]
 
-source_file="res://Assets/player/sfx/403026__alanmcki__horse-galloping-coconut-shells-version-2.wav"
-dest_files=["res://.godot/imported/403026__alanmcki__horse-galloping-coconut-shells-version-2.wav-bde34bd89922e64104b6ad4a62e49e84.sample"]
+source_file="res://assets/player/sfx/403026__alanmcki__horse-galloping-coconut-shells-version-2.wav"
+dest_files=["res://.godot/imported/403026__alanmcki__horse-galloping-coconut-shells-version-2.wav-0e641f6f016b0e64e1d1f2a167d7361d.sample"]
 
 [params]
 

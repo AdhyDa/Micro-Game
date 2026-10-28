@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dnss6bxm8csjt"]
 
-[ext_resource type="Texture2D" uid="uid://cl76mykmdghfv" path="res://Assets/player/Player_spritesheets.png" id="1_kyqiw"]
-[ext_resource type="AudioStream" uid="uid://bpllpaybjkaoj" path="res://Assets/player/sfx/403026__alanmcki__horse-galloping-coconut-shells-version-2.wav" id="2_gntrk"]
-[ext_resource type="AudioStream" uid="uid://dsaw71l760jm7" path="res://Assets/player/sfx/240640__misscellany__metallic-whoosh.wav" id="3_5ixxa"]
-[ext_resource type="AudioStream" uid="uid://cmnpgotjfhse" path="res://Assets/player/sfx/808213__arther1974__jump_grunt_01.wav" id="4_nn08x"]
-[ext_resource type="AudioStream" uid="uid://d15pkgdtgvrf1" path="res://Assets/player/sfx/554443__blankened__male-death-sound.mp3" id="5_52ee3"]
+[ext_resource type="Texture2D" uid="uid://cl76mykmdghfv" path="res://assets/player/Player_spritesheets.png" id="1_kyqiw"]
+[ext_resource type="AudioStream" uid="uid://bpllpaybjkaoj" path="res://assets/player/sfx/403026__alanmcki__horse-galloping-coconut-shells-version-2.wav" id="2_gntrk"]
+[ext_resource type="AudioStream" uid="uid://dsaw71l760jm7" path="res://assets/player/sfx/240640__misscellany__metallic-whoosh.wav" id="3_5ixxa"]
+[ext_resource type="AudioStream" uid="uid://cmnpgotjfhse" path="res://assets/player/sfx/808213__arther1974__jump_grunt_01.wav" id="4_nn08x"]
+[ext_resource type="AudioStream" uid="uid://d15pkgdtgvrf1" path="res://assets/player/sfx/554443__blankened__male-death-sound.mp3" id="5_52ee3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uupxc"]
 size = Vector2(15, 20)
@@ -270,6 +270,7 @@ animations = [{
 size = Vector2(22, 15)
 
 [node name="Player" type="CharacterBody2D" unique_id=2106021912]
+texture_filter = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=187866655]
 visible = false
@@ -277,9 +278,11 @@ position = Vector2(-0.5, 5)
 shape = SubResource("RectangleShape2D_uupxc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2126652363]
+texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ifisb")
 animation = &"attack_player"
 autoplay = "idle_player"
+frame_progress = 0.64026845
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1503006965]
 scale = Vector2(0.35999835, 0.35999835)
