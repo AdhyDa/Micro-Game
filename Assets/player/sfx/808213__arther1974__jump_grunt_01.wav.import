@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cmnpgotjfhse"
-path="res://.godot/imported/808213__arther1974__jump_grunt_01.wav-e980606f5a5608aa26d8b5df1f2c66bc.sample"
+path="res://.godot/imported/808213__arther1974__jump_grunt_01.wav-2f0ca3bc14389c94b660caae57438f47.sample"
 
 [deps]
 
-source_file="res://assets/player/sfx/808213__arther1974__jump_grunt_01.wav"
-dest_files=["res://.godot/imported/808213__arther1974__jump_grunt_01.wav-e980606f5a5608aa26d8b5df1f2c66bc.sample"]
+source_file="res://Assets/player/sfx/808213__arther1974__jump_grunt_01.wav"
+dest_files=["res://.godot/imported/808213__arther1974__jump_grunt_01.wav-2f0ca3bc14389c94b660caae57438f47.sample"]
 
 [params]
 

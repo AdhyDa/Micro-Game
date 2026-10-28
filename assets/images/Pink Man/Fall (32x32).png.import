@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://j7kvvbayrhip"
-path="res://.godot/imported/Fall (32x32).png-06c6229693b5a40cb4a61fe20ad19108.ctex"
+path="res://.godot/imported/Fall (32x32).png-07e09e3f9173348e57d0831122afad88.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Pink Man/Fall (32x32).png"
-dest_files=["res://.godot/imported/Fall (32x32).png-06c6229693b5a40cb4a61fe20ad19108.ctex"]
+source_file="res://Assets/images/Pink Man/Fall (32x32).png"
+dest_files=["res://.godot/imported/Fall (32x32).png-07e09e3f9173348e57d0831122afad88.ctex"]
 
 [params]
 

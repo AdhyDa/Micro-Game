@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dm0kcbaaptec6"
-path="res://.godot/imported/MiniShieldMan.png-80f411b4a700c5d5c9a55ce9b05009e8.ctex"
+path="res://.godot/imported/MiniShieldMan.png-d9a27694fe3a450686098e1ace7627c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/enemy/MiniShieldMan.png"
-dest_files=["res://.godot/imported/MiniShieldMan.png-80f411b4a700c5d5c9a55ce9b05009e8.ctex"]
+source_file="res://Assets/enemy/MiniShieldMan.png"
+dest_files=["res://.godot/imported/MiniShieldMan.png-d9a27694fe3a450686098e1ace7627c3.ctex"]
 
 [params]
 

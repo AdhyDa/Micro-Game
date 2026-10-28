@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://miw67ojg41jd"
-path="res://.godot/imported/202102__spookymodem__rattling-bones.wav-5cb6ed3144d4ca46b65ea1cda15a7482.sample"
+path="res://.godot/imported/202102__spookymodem__rattling-bones.wav-82aa9ef5a98686c7fac0ab5a04f6b3b5.sample"
 
 [deps]
 
-source_file="res://assets/enemy/sfx/202102__spookymodem__rattling-bones.wav"
-dest_files=["res://.godot/imported/202102__spookymodem__rattling-bones.wav-5cb6ed3144d4ca46b65ea1cda15a7482.sample"]
+source_file="res://Assets/enemy/sfx/202102__spookymodem__rattling-bones.wav"
+dest_files=["res://.godot/imported/202102__spookymodem__rattling-bones.wav-82aa9ef5a98686c7fac0ab5a04f6b3b5.sample"]
 
 [params]
 

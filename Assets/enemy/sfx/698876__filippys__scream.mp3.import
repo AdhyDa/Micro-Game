@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://cag4hx1dsgcv0"
-path="res://.godot/imported/698876__filippys__scream.mp3-902fbfcea2c842afc65b0991430119bf.mp3str"
+path="res://.godot/imported/698876__filippys__scream.mp3-b0f178b69f350c7c5e2454c37c749b8b.mp3str"
 
 [deps]
 
-source_file="res://assets/enemy/sfx/698876__filippys__scream.mp3"
-dest_files=["res://.godot/imported/698876__filippys__scream.mp3-902fbfcea2c842afc65b0991430119bf.mp3str"]
+source_file="res://Assets/enemy/sfx/698876__filippys__scream.mp3"
+dest_files=["res://.godot/imported/698876__filippys__scream.mp3-b0f178b69f350c7c5e2454c37c749b8b.mp3str"]
 
 [params]
 

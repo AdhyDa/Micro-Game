@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cyyx87vmggqkw"
-path="res://.godot/imported/346557__def__stick-1.wav-8455a9d8ae8f369cb9864f8867ccff08.sample"
+path="res://.godot/imported/346557__def__stick-1.wav-a10a45ae3bbd7a78f376b009d8591d4f.sample"
 
 [deps]
 
-source_file="res://assets/enemy/sfx/346557__def__stick-1.wav"
-dest_files=["res://.godot/imported/346557__def__stick-1.wav-8455a9d8ae8f369cb9864f8867ccff08.sample"]
+source_file="res://Assets/enemy/sfx/346557__def__stick-1.wav"
+dest_files=["res://.godot/imported/346557__def__stick-1.wav-a10a45ae3bbd7a78f376b009d8591d4f.sample"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bs0epai13hj4m"
-path="res://.godot/imported/PixelSpaces Free Pack.png-98f597e094e9735bd51b4930c21984a4.ctex"
+path="res://.godot/imported/PixelSpaces Free Pack.png-91e6dcfc09b7a50c01ab9f0c0beaa74f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Tilemap/PixelSpaces Free Pack.png"
-dest_files=["res://.godot/imported/PixelSpaces Free Pack.png-98f597e094e9735bd51b4930c21984a4.ctex"]
+source_file="res://Assets/images/Tilemap/PixelSpaces Free Pack.png"
+dest_files=["res://.godot/imported/PixelSpaces Free Pack.png-91e6dcfc09b7a50c01ab9f0c0beaa74f.ctex"]
 
 [params]
 
