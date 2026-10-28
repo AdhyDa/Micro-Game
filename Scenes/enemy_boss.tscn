@@ -325,9 +325,19 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wuwfj"]
-size = Vector2(27, 33)
+size = Vector2(34, 27)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_03pj2"]
+size = Vector2(22, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w5ahq"]
+size = Vector2(25, 23)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pbt5j"]
+bg_color = Color(0.8398672, 0.13277516, 1.92523e-07, 1)
 
 [node name="EnemyBoss" type="CharacterBody2D" unique_id=1716164722]
+collision_layer = 4
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=822729628]
 material = SubResource("CanvasItemMaterial_uupxc")
@@ -337,7 +347,7 @@ autoplay = "idle_boss"
 frame_progress = 0.5356913
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1102616580]
-position = Vector2(-2.5, -0.5)
+position = Vector2(-6, 2.5)
 shape = SubResource("RectangleShape2D_wuwfj")
 
 [node name="SfxWalk" type="AudioStreamPlayer2D" parent="." unique_id=2007899885]
@@ -350,3 +360,27 @@ stream = ExtResource("3_w5ahq")
 
 [node name="SfxDeath" type="AudioStreamPlayer2D" parent="." unique_id=2027144956]
 stream = ExtResource("4_pbt5j")
+
+[node name="HitBox" type="Area2D" parent="." unique_id=946423465]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=833911864]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_03pj2")
+
+[node name="DamageArea" type="Area2D" parent="." unique_id=868974444]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea" unique_id=1145390058]
+position = Vector2(1.5, 0.5)
+shape = SubResource("RectangleShape2D_w5ahq")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=912173660]
+offset_left = -22.0
+offset_top = -20.0
+offset_right = 59.806664
+offset_bottom = -15.829767
+scale = Vector2(0.5256296, 0.5256296)
+theme_override_styles/fill = SubResource("StyleBoxFlat_pbt5j")
+show_percentage = false

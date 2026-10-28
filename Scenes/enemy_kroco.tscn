@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://df22ukq1ddc3i" path="res://Assets/enemy/skeleton.png" id="1_lxcxd"]
 [ext_resource type="AudioStream" uid="uid://miw67ojg41jd" path="res://Assets/enemy/sfx/202102__spookymodem__rattling-bones.wav" id="2_jlemq"]
 [ext_resource type="AudioStream" uid="uid://cag4hx1dsgcv0" path="res://Assets/enemy/sfx/698876__filippys__scream.mp3" id="3_3vj4j"]
+[ext_resource type="Texture2D" uid="uid://4jkqjdqhb78t" path="res://Assets/enemy/gemini-image-2_Buatkan_spriteframe_untuk_death_state_saja_dengan_dasarnya_ada_pada_gambar_ini-0-Photoroom.png" id="3_i7brk"]
 [ext_resource type="AudioStream" uid="uid://cyyx87vmggqkw" path="res://Assets/enemy/sfx/346557__def__stick-1.wav" id="4_i7brk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2a43n"]
@@ -25,6 +26,34 @@ region = Rect2(544, 0, 32, 24)
 [sub_resource type="AtlasTexture" id="AtlasTexture_8u54y"]
 atlas = ExtResource("1_lxcxd")
 region = Rect2(576, 0, 32, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smhfq"]
+atlas = ExtResource("3_i7brk")
+region = Rect2(0, 512, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tifm2"]
+atlas = ExtResource("3_i7brk")
+region = Rect2(256, 512, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ajox"]
+atlas = ExtResource("3_i7brk")
+region = Rect2(512, 512, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s7n8i"]
+atlas = ExtResource("3_i7brk")
+region = Rect2(768, 512, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7j3mk"]
+atlas = ExtResource("3_i7brk")
+region = Rect2(0, 768, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qlc6"]
+atlas = ExtResource("3_i7brk")
+region = Rect2(256, 768, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_betfj"]
+atlas = ExtResource("3_i7brk")
+region = Rect2(512, 768, 256, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l8ku0"]
 atlas = ExtResource("1_lxcxd")
@@ -100,9 +129,35 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8u54y")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"attack_enemy",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smhfq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tifm2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ajox")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s7n8i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7j3mk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qlc6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_betfj")
+}],
+"loop": 0,
+"name": &"death_enemy",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -129,7 +184,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_bb0ak")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"idle_enemy",
 "speed": 5.0
 }, {
@@ -152,7 +207,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nt4tw")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"run_enemy",
 "speed": 6.0
 }]
@@ -175,10 +230,8 @@ script = ExtResource("1_3vj4j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1823520106]
 sprite_frames = SubResource("SpriteFrames_ifisb")
-animation = &"attack_enemy"
+animation = &"death_enemy"
 autoplay = "idle_enemy"
-frame = 1
-frame_progress = 0.6710512
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=998658936]
 visible = false

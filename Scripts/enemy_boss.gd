@@ -6,6 +6,7 @@ var attack_damage := 20
 
 # Status bangun/aktif (diubah oleh TriggerArena saat pintu tertutup)
 var is_active := false 
+@onready var boss_animation: AnimatedSprite2D = $AnimatedSprite2D
 
 @onready var hp_bar: ProgressBar = get_node_or_null("ProgressBar")
 @onready var sprite: AnimatedSprite2D = get_node_or_null("AnimatedSprite2D")
@@ -51,6 +52,7 @@ func _physics_process(delta: float) -> void:
 		var overlapping_bodies = damage_area.get_overlapping_bodies()
 		for body in overlapping_bodies:
 			if body.is_in_group("player") and body.has_method("take_damage"):
+				boss_animation.play("attack_boss")
 				body.take_damage(attack_damage)
 
 func take_damage(amount: int) -> void:
@@ -83,5 +85,6 @@ func show_floating_damage(amount: int) -> void:
 	float_tween.tween_callback(text_node.queue_free)
 
 func die() -> void:
+	boss_animation.play("death_boss")
 	# Nanti kita bisa isi dengan efek pintu terbuka kembali atau efek ledakan
 	queue_free()

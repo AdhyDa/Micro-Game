@@ -8,7 +8,7 @@ var attack_damage := 10
 
 # Tambahkan variabel cooldown ini
 var flip_cooldown := 0.0 
-
+@onready var kroco_animation: AnimatedSprite2D = $AnimatedSprite2D
 @onready var hp_bar: ProgressBar = get_node_or_null("ProgressBar")
 @onready var sprite: AnimatedSprite2D = get_node_or_null("AnimatedSprite2D")
 @onready var damage_area: Area2D = get_node_or_null("DamageArea") 
@@ -54,6 +54,7 @@ func _physics_process(delta: float) -> void:
 		var overlapping_bodies = damage_area.get_overlapping_bodies()
 		for body in overlapping_bodies:
 			if body.is_in_group("player") and body.has_method("take_damage"):
+				kroco_animation.play("attack_enemy")
 				body.take_damage(attack_damage)
 
 func take_damage(amount: int) -> void:
@@ -84,4 +85,8 @@ func show_floating_damage(amount: int) -> void:
 	float_tween.tween_callback(text_node.queue_free)
 
 func die() -> void:
-	queue_free()
+	if hp == 0:
+		velocity.x = 0
+		kroco_animation.play("death_enemy")
+		await get_tree().create_timer(1.5).timeout
+		queue_free()

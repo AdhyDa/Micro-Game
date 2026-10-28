@@ -31,7 +31,7 @@ func _on_body_entered(body: Node2D) -> void:
 			
 			# Animasi Kamera Membesar (Zoom Out) misal dari 1.0 ke 0.8
 			var cam_tween = create_tween()
-			cam_tween.tween_property(arena_camera, "zoom", Vector2(0.8, 0.8), 1.0)
+			cam_tween.tween_property(arena_camera, "zoom", Vector2(1.7, 1.7), 1.0)
 		
 		# 2. JATUHKAN PINTU (Animasi Terkunci)
 		if pintu_boss:

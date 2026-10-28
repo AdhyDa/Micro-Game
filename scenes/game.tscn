@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://bhf3m3dod8keb" path="res://Scenes/apple_health.tscn" id="11_1phco"]
 [ext_resource type="PackedScene" uid="uid://bhafo76cp4akn" path="res://Scenes/enemy_boss.tscn" id="11_rysoc"]
 [ext_resource type="Script" uid="uid://b7bvqgr0d4wfu" path="res://Scripts/enemy_boss.gd" id="15_85qyi"]
-[ext_resource type="Script" uid="uid://c5ihu588s54io" path="res://scripts/trigger_arena.gd" id="17_iivbl"]
+[ext_resource type="Script" uid="uid://c5ihu588s54io" path="res://Scripts/trigger_arena.gd" id="17_85qyi"]
 [ext_resource type="Texture2D" uid="uid://vokicgvct50o" path="res://Assets/platform/Objects/Sword.png" id="18_7nbq1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbhrr"]
@@ -1583,7 +1583,7 @@ position = Vector2(831, 467)
 texture_filter = 1
 position = Vector2(1127, 403)
 
-[node name="EnemyBoss" parent="." unique_id=1716164722 instance=ExtResource("11_rysoc")]
+[node name="EnemyBoss" parent="." unique_id=1716164722 groups=["enemy_boss"] instance=ExtResource("11_rysoc")]
 texture_filter = 1
 position = Vector2(1558, 526)
 script = ExtResource("15_85qyi")
@@ -1594,13 +1594,14 @@ volume_db = -11.86
 autoplay = true
 
 [node name="ArenaCamera" type="Camera2D" parent="." unique_id=489053753]
-position = Vector2(1530, 452)
+position = Vector2(1541, 464)
 enabled = false
 
 [node name="TriggerArena" type="Area2D" parent="." unique_id=1421340545 node_paths=PackedStringArray("arena_camera", "pintu_boss", "boss")]
-position = Vector2(1530, 452)
+position = Vector2(1544, 453)
+collision_layer = 0
 collision_mask = 2
-script = ExtResource("17_iivbl")
+script = ExtResource("17_85qyi")
 arena_camera = NodePath("../ArenaCamera")
 pintu_boss = NodePath("../PintuBoss")
 boss = NodePath("../EnemyBoss")
@@ -1631,3 +1632,4 @@ shape = SubResource("RectangleShape2D_q6fjv")
 [connection signal="body_exited" from="Tangga3" to="Player" method="_on_tangga_body_exited"]
 [connection signal="body_entered" from="Tangga4" to="Player" method="_on_tangga_body_entered"]
 [connection signal="body_exited" from="Tangga4" to="Player" method="_on_tangga_body_exited"]
+[connection signal="body_entered" from="TriggerArena" to="TriggerArena" method="_on_body_entered"]
