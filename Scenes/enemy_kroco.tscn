@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dh0kpakhn17fo"]
 
+[ext_resource type="Script" uid="uid://dd4ufgmmqk876" path="res://Scripts/enemy_kroco.gd" id="1_3vj4j"]
 [ext_resource type="Texture2D" uid="uid://df22ukq1ddc3i" path="res://Assets/enemy/skeleton.png" id="1_lxcxd"]
 [ext_resource type="AudioStream" uid="uid://miw67ojg41jd" path="res://Assets/enemy/sfx/202102__spookymodem__rattling-bones.wav" id="2_jlemq"]
 [ext_resource type="AudioStream" uid="uid://cag4hx1dsgcv0" path="res://Assets/enemy/sfx/698876__filippys__scream.mp3" id="3_3vj4j"]
@@ -101,7 +102,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"attack_enemy",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -159,19 +160,30 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxcxd"]
 size = Vector2(20, 22)
 
-[node name="EnemyKroco" type="CharacterBody2D" unique_id=347038753]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wa8bf"]
+size = Vector2(22, 20)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wa8bf"]
+bg_color = Color(0.8398672, 0.13277516, 1.92523e-07, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_be7lr"]
+size = Vector2(25, 23)
+
+[node name="EnemyKroco" type="CharacterBody2D" unique_id=347038753 groups=["enemy_kroco"]]
+collision_layer = 4
+script = ExtResource("1_3vj4j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1823520106]
 sprite_frames = SubResource("SpriteFrames_ifisb")
-animation = &"run_enemy"
+animation = &"attack_enemy"
 autoplay = "idle_enemy"
-frame_progress = 0.37109149
+frame = 1
+frame_progress = 0.6710512
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=998658936]
+visible = false
 position = Vector2(-2, 1)
 shape = SubResource("RectangleShape2D_lxcxd")
-
-[node name="Area2D" type="Area2D" parent="." unique_id=455481091]
 
 [node name="SfxIdle" type="AudioStreamPlayer2D" parent="." unique_id=53842419]
 stream = ExtResource("2_jlemq")
@@ -182,3 +194,32 @@ stream = ExtResource("3_3vj4j")
 [node name="SfxAttack" type="AudioStreamPlayer2D" parent="." unique_id=1021258845]
 stream = ExtResource("4_i7brk")
 volume_db = 7.775
+
+[node name="HitBox" type="Area2D" parent="." unique_id=655368123]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=1986611065]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_wa8bf")
+
+[node name="LedgeCheck" type="RayCast2D" parent="." unique_id=416329368]
+position = Vector2(-10.000001, -17)
+scale = Vector2(0.5256296, 0.5256296)
+target_position = Vector2(5.707443, 55.171932)
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=184823953]
+offset_left = -10.000001
+offset_top = -17.0
+offset_right = 28.04961
+offset_bottom = -12.829767
+scale = Vector2(0.5256296, 0.5256296)
+theme_override_styles/fill = SubResource("StyleBoxFlat_wa8bf")
+show_percentage = false
+
+[node name="DamageArea" type="Area2D" parent="." unique_id=679837020]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea" unique_id=274449772]
+position = Vector2(1.5, 0.5)
+shape = SubResource("RectangleShape2D_be7lr")
