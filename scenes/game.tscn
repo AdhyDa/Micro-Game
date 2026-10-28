@@ -4,35 +4,54 @@
 [ext_resource type="Texture2D" uid="uid://df55npp5vl3fe" path="res://Assets/platform/Background.png" id="1_i6g32"]
 [ext_resource type="Texture2D" uid="uid://cr8ug862t0216" path="res://Assets/sprites/world_tileset.png" id="1_yqjtg"]
 [ext_resource type="Texture2D" uid="uid://cc5sp1vq78nik" path="res://Assets/sprites/platforms.png" id="2_lnu2h"]
-[ext_resource type="PackedScene" uid="uid://c28od52xn0gsa" path="res://Scenes/hero.tscn" id="3_iywne"]
 [ext_resource type="PackedScene" uid="uid://dvknt3626jya8" path="res://Scenes/enemy.tscn" id="4_p57ef"]
 [ext_resource type="PackedScene" uid="uid://dugih4m8xomil" path="res://Scenes/boss.tscn" id="5_u5sy4"]
 [ext_resource type="Texture2D" uid="uid://dtknxo71kp7t4" path="res://Assets/platform/Objects/Skull Type 2.png" id="5_v158k"]
+[ext_resource type="PackedScene" uid="uid://dnss6bxm8csjt" path="res://Scenes/Player.tscn" id="6_h4fw4"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="7_ldgsr"]
 [ext_resource type="AudioStream" uid="uid://bnm6qq8ngpop6" path="res://Assets/music/Persona 4 - Secret Base - Veysel Aytekin.mp3" id="9_h4fw4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbhrr"]
 texture = ExtResource("1_yqjtg")
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:0/0 = 0
+7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:0/0 = 0
+8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 9:0/0 = 0
 10:0/0 = 0
 11:0/0 = 0
 0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 6:1/0 = 0
+6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:1/0 = 0
+7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:1/0 = 0
+8:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 9:1/0 = 0
 10:1/0 = 0
 11:1/0 = 0
@@ -141,25 +160,51 @@ texture = ExtResource("1_yqjtg")
 3:15/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_xrivr"]
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_lbhrr")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iywne"]
 texture = ExtResource("2_lnu2h")
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_b1lj4"]
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_iywne")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ldgsr"]
+size = Vector2(14, 155)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o5yvi"]
+size = Vector2(14, 124)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rku1e"]
+size = Vector2(14, 172)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wa8bf"]
+size = Vector2(14, 123)
 
 [node name="Game" type="Node2D" unique_id=762225137]
 
@@ -196,8 +241,40 @@ position = Vector2(232, 306)
 scale = Vector2(0.34, 0.34)
 texture = ExtResource("5_v158k")
 
-[node name="hero" parent="." unique_id=890854277 instance=ExtResource("3_iywne")]
-position = Vector2(104, 292)
+[node name="Tangga" type="Area2D" parent="." unique_id=81624191]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tangga" unique_id=501415858]
+visible = false
+position = Vector2(328, 226.5)
+shape = SubResource("RectangleShape2D_ldgsr")
+
+[node name="Tangga2" type="Area2D" parent="." unique_id=1349418648]
+position = Vector2(192, -17)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tangga2" unique_id=246540204]
+visible = false
+position = Vector2(328, 211)
+shape = SubResource("RectangleShape2D_o5yvi")
+
+[node name="Tangga3" type="Area2D" parent="." unique_id=1604136064]
+position = Vector2(192, 143)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tangga3" unique_id=362063944]
+visible = false
+position = Vector2(328, 235)
+shape = SubResource("RectangleShape2D_rku1e")
+
+[node name="Tangga4" type="Area2D" parent="." unique_id=210502734]
+position = Vector2(800, -112)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tangga4" unique_id=1835703041]
+visible = false
+position = Vector2(328, 210.5)
+shape = SubResource("RectangleShape2D_wa8bf")
+
+[node name="Player" parent="." unique_id=2106021912 instance=ExtResource("6_h4fw4")]
+position = Vector2(88, 288)
+script = ExtResource("7_ldgsr")
 
 [node name="enemy" parent="." unique_id=1594590513 instance=ExtResource("4_p57ef")]
 position = Vector2(391, 292)
@@ -257,3 +334,12 @@ position = Vector2(1528, 532)
 stream = ExtResource("9_h4fw4")
 volume_db = -11.86
 autoplay = true
+
+[connection signal="body_entered" from="Tangga" to="Player" method="_on_tangga_body_entered"]
+[connection signal="body_exited" from="Tangga" to="Player" method="_on_tangga_body_exited"]
+[connection signal="body_entered" from="Tangga2" to="Player" method="_on_tangga_body_entered"]
+[connection signal="body_exited" from="Tangga2" to="Player" method="_on_tangga_body_exited"]
+[connection signal="body_entered" from="Tangga3" to="Player" method="_on_tangga_body_entered"]
+[connection signal="body_exited" from="Tangga3" to="Player" method="_on_tangga_body_exited"]
+[connection signal="body_entered" from="Tangga4" to="Player" method="_on_tangga_body_entered"]
+[connection signal="body_exited" from="Tangga4" to="Player" method="_on_tangga_body_exited"]
