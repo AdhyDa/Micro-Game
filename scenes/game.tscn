@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dugih4m8xomil" path="res://Scenes/boss.tscn" id="5_u5sy4"]
 [ext_resource type="Texture2D" uid="uid://dtknxo71kp7t4" path="res://Assets/platform/Objects/Skull Type 2.png" id="5_v158k"]
 [ext_resource type="PackedScene" uid="uid://dnss6bxm8csjt" path="res://Scenes/Player.tscn" id="6_h4fw4"]
-[ext_resource type="Script" uid="uid://0mfgvqb2r3p" path="res://Scripts/player.gd" id="7_ldgsr"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="7_ldgsr"]
 [ext_resource type="AudioStream" uid="uid://bnm6qq8ngpop6" path="res://Assets/music/Persona 4 - Secret Base - Veysel Aytekin.mp3" id="9_h4fw4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbhrr"]
