@@ -230,7 +230,7 @@ script = ExtResource("1_3vj4j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1823520106]
 sprite_frames = SubResource("SpriteFrames_ifisb")
-animation = &"death_enemy"
+animation = &"idle_enemy"
 autoplay = "idle_enemy"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=998658936]
@@ -248,7 +248,7 @@ stream = ExtResource("3_3vj4j")
 stream = ExtResource("4_i7brk")
 volume_db = 7.775
 
-[node name="HitBox" type="Area2D" parent="." unique_id=655368123]
+[node name="HitBox" type="Area2D" parent="." unique_id=655368123 groups=["enemy_kroco"]]
 visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=1986611065]

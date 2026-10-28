@@ -217,9 +217,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_a0vro")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"attack_boss",
-"speed": 7.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -261,7 +261,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_k1n2n")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"death_boss",
 "speed": 6.0
 }, {
@@ -319,7 +319,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wsk6j")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"walk_boss",
 "speed": 5.0
 }]
@@ -342,9 +342,10 @@ collision_layer = 4
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=822729628]
 material = SubResource("CanvasItemMaterial_uupxc")
 sprite_frames = SubResource("SpriteFrames_ifisb")
-animation = &"death_boss"
+animation = &"attack_boss"
 autoplay = "idle_boss"
-frame_progress = 0.5356913
+frame = 12
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1102616580]
 position = Vector2(-6, 2.5)

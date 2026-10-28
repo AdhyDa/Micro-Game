@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var heal_amount := 10 
+@export var heal_amount := 20
 @onready var audio_player: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var collision_shape: CollisionShape2D = $CollisionShape2D
 
@@ -13,25 +13,30 @@ func _ready() -> void:
 		connect("body_entered", _on_body_entered)
 
 func _on_body_entered(body: Node2D) -> void:
-	print("Apel bersentuhan dengan: ", body.name, " | Apakah masuk grup player? ", body.is_in_group("player"))
-	
 	if body.is_in_group("player"):
 		if body.has_method("heal"):
-			body.heal(heal_amount)
+			# Panggil fungsi heal dan simpan hasilnya (true jika butuh heal, false jika hp penuh)
+			var is_healed = body.heal(heal_amount)
 			
-			# Matikan collision agar tidak bisa diambil dua kali
-			if collision_shape:
-				collision_shape.set_deferred("disabled", true)
-				
-			# Sembunyikan gambar apel
-			if sprite:
-				sprite.visible = false
-				
-			# Putar suara jika ada
-			if audio_player and audio_player.stream:
-				audio_player.play()
-				await audio_player.finished
-				
-			queue_free()
+			# Jika is_healed == true (Player berhasil memakan apel)
+			if is_healed:
+				# Matikan collision agar tidak bisa diambil dua kali
+				if collision_shape:
+					collision_shape.set_deferred("disabled", true)
+					
+				# Sembunyikan gambar apel
+				if sprite:
+					sprite.visible = false
+					
+				# Putar suara jika ada
+				if audio_player and audio_player.stream:
+					audio_player.play()
+					await audio_player.finished
+					
+				queue_free()
+			else:
+				# Jika is_healed == false (HP sudah 100)
+				print("HP Player sudah penuh, apel hanya dilewati.")
+				# Biarkan apel tetap ada dan collision tetap aktif
 		else:
 			print("ERROR: Player menyentuh apel, tapi Player tidak memiliki fungsi heal() di script player.gd!")

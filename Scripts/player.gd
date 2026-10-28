@@ -10,6 +10,7 @@ const CLIMB_SPEED = 150.0
 var is_attacking := false
 var attack_damage := 25 
 var hp := 100
+var max_hp := 100
 var is_invincible := false 
 var is_dead := false # <--- TAMBAHAN: Status untuk mendeteksi apakah player sudah mati
 
@@ -102,7 +103,7 @@ func perform_attack() -> void:
 	
 	var overlapping_bodies = hitbox.get_overlapping_bodies()
 	for body in overlapping_bodies:
-		if body.is_in_group("enemy_kroco") and body.has_method("take_damage"):
+		if (body.is_in_group("enemy_kroco") or body.is_in_group("enemy_boss")) and body.has_method("take_damage"):
 			body.take_damage(attack_damage)
 			
 	await player.animation_finished
@@ -169,13 +170,19 @@ func _on_tangga_body_exited(body: Node2D) -> void:
 		is_climbing = false
 
 # Fungsi untuk menambah darah saat mengambil item
-func heal(amount: int) -> void:
-	# Batasi maksimal HP agar tidak melebihi 100 (atau sesuaikan batas maksimalmu)
-	hp = min(hp + amount, 100) 
+func heal(amount: int) -> bool: # <--- UBAH 'void' menjadi 'bool'
+	# Jika HP sudah penuh, kembalikan false (gagal heal / tidak butuh heal)
+	if hp >= max_hp:
+		return false
+	
+	# Jika HP belum penuh, tambahkan HP tapi jangan sampai melebihi max_hp (100)
+	hp = min(hp + amount, max_hp)
 	
 	if hp_bar:
 		hp_bar.value = hp
 		
 	print("Player memakan apel! HP bertambah, sisa HP: ", hp)
+	
+	return true # <--- Kembalikan true menandakan heal berhasil
 	
 	
