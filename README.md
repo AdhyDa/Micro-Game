@@ -1,13 +1,11 @@
-<p align="right">
-  <b>Bahasa Indonesia</b> | <a href="README-en.md">English</a>
-</p>
-
 # Cavern Reveal — 2D Pixel Action Platformer (Microgame)
 
 [![Godot Engine](https://img.shields.io/badge/Godot_Engine-4.7.2-478CBF?style=for-the-badge&logo=godot-engine&logoColor=white)](https://godotengine.org/)
 [![Style](https://img.shields.io/badge/Art_Style-16--bit_Pixel_Art-purple?style=for-the-badge)]()
 [![Platform](https://img.shields.io/badge/Platform-PC_%2F_Desktop-brightgreen?style=for-the-badge)]()
 [![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)]()
+
+**Language / Bahasa: [Bahasa Indonesia](README.md)** | [English](README-en.md)
 
 > **Microgame Team Intro** — Game *2D Side-Scrolling Action Platformer* yang dibangun menggunakan **Godot Engine 4.7.2**. Pemain mengendalikan seorang Ksatria Biru (*Blue Knight*) menjelajahi kompleks gua bawah tanah multi-bioma, bertarung melawan musuh kroco hingga bos monster, mengumpulkan *item*, serta mengaktifkan titik *trigger* pengenalan tim.
 
